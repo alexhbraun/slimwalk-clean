@@ -1,0 +1,127 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 110 33% 97%; /* Very light green - E8F0E7 */
+    --foreground: 125 24% 23%; 
+
+    --card: 110 33% 99%;
+    --card-foreground: 125 24% 23%;
+
+    --popover: 110 33% 99%;
+    --popover-foreground: 125 24% 23%;
+
+    --primary: 125 31% 69%; /* Light green - A7D1AB */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 110 20% 90%;
+    --secondary-foreground: 125 24% 23%;
+
+    --muted: 110 20% 85%;
+    --muted-foreground: 125 15% 45%;
+
+    --accent: 184 81% 65%; /* Muted teal - 70A4A9 */
+    --accent-foreground: 125 24% 15%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --cta: 14 83% 58%; /* Orange - #f56a3b */
+    --cta-accent: 35 91% 65%; /* Lighter Orange/Tangerine */
+    --cta-foreground: 0 0% 100%;
+
+    --border: 110 20% 88%;
+    --input: 110 20% 92%;
+    --ring: 125 31% 69%;
+
+    --radius: 0.8rem;
+    
+    --chart-1: 125 24% 23%;
+    --chart-2: 125 24% 33%;
+    --chart-3: 125 24% 43%;
+    --chart-4: 125 24% 53%;
+    --chart-5: 125 24% 63%;
+  }
+
+  .dark {
+    --background: 125 10% 10%;
+    --foreground: 110 20% 95%;
+
+    --card: 125 10% 12%;
+    --card-foreground: 110 20% 95%;
+
+    --popover: 125 10% 12%;
+    --popover-foreground: 110 20% 95%;
+
+    --primary: 125 31% 69%; /* Light green - A7D1AB */
+    --primary-foreground: 125 24% 10%;
+
+    --secondary: 125 10% 18%;
+    --secondary-foreground: 110 20% 95%;
+
+    --muted: 125 10% 25%;
+    --muted-foreground: 110 15% 65%;
+
+    --accent: 184 81% 65%; /* Muted teal - 70A4A9 */
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --cta: 14 83% 58%; /* Orange - #f56a3b */
+    --cta-accent: 35 91% 65%; /* Lighter Orange/Tangerine */
+    --cta-foreground: 0 0% 100%;
+
+    --border: 125 10% 20%;
+    --input: 125 10% 20%;
+    --ring: 125 31% 69%;
+    
+    --chart-1: 174 50% 70%;
+    --chart-2: 174 50% 60%;
+    --chart-3: 174 50% 50%;
+    --chart-4: 174 50% 40%;
+    --chart-5: 174 50% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-foreground;
+    background-color: hsl(var(--background));
+    min-height: 100vh;
+  }
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent;
+  }
+  .gradient-text-accent {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-accent to-cyan-400;
+  }
+  .glassmorphism {
+    @apply bg-card/60 backdrop-blur-lg border border-card/30;
+  }
+}
+
+@layer utilities {
+  .title-primary {
+    color: hsl(var(--primary));
+  }
+  .quiz-progress > div {
+    background-color: #014946 !important;
+  }
+}
+
+.quiz-bg-pattern {
+  background-color: hsl(var(--background));
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3e%3cpath fill='none' stroke='hsl(110 20% 85% / 0.25)' stroke-width='80' stroke-linecap='round' d='M-100 800 C 400 900, 600 700, 900 750 S 1400 500, 1600 400 S 2020 200, 2020 200'/%3e%3cpath fill='none' stroke='hsl(110 20% 85% / 0.25)' stroke-width='80' stroke-linecap='round' d='M-100 400 C 300 300, 500 500, 800 550 S 1300 700, 1500 800 S 2020 1000, 2020 1000'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+    
